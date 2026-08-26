@@ -1,96 +1,185 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DJ SHYNE TYME | Calgary DJ</title>
-<meta name="description" content="DJ SHYNE TYME — Calgary DJ playing a little bit of everything. Bookings, events and nightlife entertainment.">
-<style>
-:root{--gold:#d4af37;--gold2:#f5d77a;--black:#050505;--dark:#101010;--white:#fff;--muted:#b9b9b9}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--black);color:var(--white);line-height:1.6}
-a{text-decoration:none;color:inherit}
-nav{position:fixed;top:0;width:100%;z-index:10;background:rgba(0,0,0,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(212,175,55,.25)}
-.navin{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:16px 22px}
-.logo{font-weight:900;letter-spacing:2px;color:var(--gold);font-size:18px}
-nav a{margin-left:22px;font-size:14px;color:#eee}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 20px 60px;background:radial-gradient(circle at 50% 25%,#2b2410 0,#0d0d0d 32%,#050505 68%);position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;border:1px solid rgba(212,175,55,.2);box-shadow:0 0 100px rgba(212,175,55,.1);animation:pulse 5s infinite}
-@keyframes pulse{50%{transform:scale(1.08);opacity:.65}}
-.hero-content{position:relative;z-index:1}
-.kicker{color:var(--gold2);font-weight:bold;letter-spacing:5px;text-transform:uppercase;font-size:13px}
-h1{font-size:clamp(54px,11vw,120px);line-height:.95;margin:18px 0;text-shadow:0 0 35px rgba(212,175,55,.2)}
-.tag{font-size:clamp(18px,3vw,27px);color:#ddd;margin-bottom:30px}
-.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn{padding:14px 24px;border:1px solid var(--gold);border-radius:30px;font-weight:bold}
-.btn.primary{background:var(--gold);color:#000}
-section{padding:85px 20px}
-.container{max-width:1050px;margin:auto}
-.title{text-align:center;font-size:40px;margin-bottom:12px}
-.subtitle{text-align:center;color:var(--muted);margin-bottom:45px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-.card{background:linear-gradient(145deg,#161616,#0b0b0b);border:1px solid #292929;border-radius:18px;padding:28px}
-.card h3{color:var(--gold2);margin-bottom:8px}
-.about{background:#0b0b0b}
-.bigquote{text-align:center;font-size:clamp(25px,4vw,42px);font-weight:800;margin:20px auto;max-width:850px}
-.gold{color:var(--gold)}
-.contact{text-align:center;background:linear-gradient(180deg,#090909,#15120a)}
-.contact .phone{font-size:clamp(28px,6vw,55px);font-weight:900;color:var(--gold2);margin:18px 0}
-.social{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:25px}
-.social a{border:1px solid #444;border-radius:30px;padding:11px 18px}
-footer{text-align:center;padding:28px;color:#777;border-top:1px solid #222;font-size:13px}
-@media(max-width:650px){nav .links{display:none}.navin{justify-content:center}.card{padding:22px}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#050505" />
+  <title>DJ Shyne Tyme | Calgary DJ</title>
+  <meta name="description" content="DJ Shyne Tyme — Calgary DJ for clubs, lounges, weddings, birthdays, corporate events and private parties. Playing a little bit of everything." />
+  <style>
+    :root{
+      --bg:#050505;
+      --panel:#0d0d0d;
+      --text:#f7f4ed;
+      --muted:#b8b1a2;
+      --gold:#d7ad35;
+      --gold2:#f1cf68;
+      --line:rgba(215,173,53,.28);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;background:
+      radial-gradient(circle at 50% 12%,rgba(215,173,53,.12),transparent 28%),
+      linear-gradient(180deg,#050505,#090909 46%,#050505);
+      color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,92%);margin:auto}
+    header{
+      position:sticky;top:0;z-index:50;background:rgba(5,5,5,.9);
+      backdrop-filter:blur(12px);border-bottom:1px solid var(--line)
+    }
+    nav{display:flex;align-items:center;justify-content:space-between;min-height:74px;gap:20px}
+    .brand{font-weight:900;letter-spacing:.14em;color:var(--gold2);font-size:1.08rem}
+    .navlinks{display:flex;gap:24px;align-items:center;font-size:.96rem}
+    .navlinks a:hover{color:var(--gold2)}
+    .hero{min-height:88vh;display:grid;place-items:center;padding:72px 0 50px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+    .eyebrow{color:var(--gold2);letter-spacing:.28em;text-transform:uppercase;font-weight:800;font-size:.78rem}
+    h1{font-size:clamp(3.8rem,9vw,7.4rem);line-height:.86;margin:.18em 0 .2em;font-weight:1000;letter-spacing:-.055em}
+    h1 span{display:block;color:var(--gold2)}
+    .tagline{font-size:clamp(1.15rem,2.5vw,1.7rem);color:#eee;margin:0 0 12px}
+    .sub{color:var(--muted);max-width:620px;font-size:1.03rem}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:999px;font-weight:900;border:1px solid var(--gold)}
+    .btn.primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#080808}
+    .btn.ghost{background:transparent;color:#fff}
+    .hero-card{
+      position:relative;border:1px solid var(--line);border-radius:28px;padding:14px;
+      background:linear-gradient(145deg,rgba(215,173,53,.09),rgba(255,255,255,.02));
+      box-shadow:0 30px 80px rgba(0,0,0,.45)
+    }
+    .hero-card img{display:block;width:100%;border-radius:20px}
+    .badge{
+      position:absolute;right:-10px;bottom:22px;background:#0b0b0b;border:1px solid var(--gold);
+      color:var(--gold2);padding:11px 15px;border-radius:999px;font-weight:900;box-shadow:0 10px 30px #000
+    }
+    section{padding:86px 0}
+    .section-title{font-size:clamp(2rem,5vw,3.4rem);margin:0 0 14px}
+    .section-kicker{color:var(--gold2);text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;font-weight:900}
+    .intro{color:var(--muted);max-width:760px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+    .card{background:linear-gradient(180deg,#101010,#0a0a0a);border:1px solid var(--line);border-radius:22px;padding:25px}
+    .card h3{margin:3px 0 8px;color:var(--gold2)}
+    .card p{margin:0;color:var(--muted)}
+    .vibe{
+      border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      background:linear-gradient(90deg,rgba(215,173,53,.04),rgba(255,255,255,.01),rgba(215,173,53,.04))
+    }
+    .vibe-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+    .pillrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .pill{border:1px solid var(--line);border-radius:999px;padding:10px 14px;color:#eee;background:#0b0b0b}
+    .booking{
+      text-align:center;border:1px solid var(--line);border-radius:30px;padding:54px 22px;
+      background:radial-gradient(circle at 50% 0,rgba(215,173,53,.14),transparent 45%),#0a0a0a
+    }
+    .contact-links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:26px}
+    .social{color:var(--gold2);font-weight:800}
+    footer{padding:28px 0 48px;color:#877f70;text-align:center}
+    @media(max-width:820px){
+      nav{min-height:66px}
+      .navlinks{gap:15px;font-size:.88rem}
+      .hero{padding-top:52px}
+      .hero-grid,.vibe-grid{grid-template-columns:1fr}
+      .hero-card{order:-1}
+      .cards{grid-template-columns:1fr}
+      h1{font-size:clamp(3.5rem,18vw,5.8rem)}
+    }
+    @media(max-width:520px){
+      .brand{font-size:.92rem}
+      .navlinks a:nth-child(1){display:none}
+      .navlinks{gap:12px}
+      section{padding:66px 0}
+      .btn{width:100%}
+      .actions{display:grid}
+    }
+  </style>
 </head>
 <body>
-<nav><div class="navin"><div class="logo">DJ SHYNE TYME</div><div class="links"><a href="#about">About</a><a href="#vibe">Vibe</a><a href="#book">Book Me</a></div></div></nav>
-
-<header class="hero">
-<div class="hero-content">
-<div class="kicker">Calgary, Alberta • DJ & Entertainment</div>
-<h1>SHYNE<br>TYME</h1>
-<p class="tag">Playing a little bit of everything.</p>
-<div class="btns">
-<a class="btn primary" href="tel:+18257472753">Call / Book Me</a>
-<a class="btn" href="#book">Contact</a>
-</div>
-</div>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#top">DJ SHYNE TYME</a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#vibe">Vibe</a>
+        <a href="#book">Book Me</a>
+      </div>
+    </nav>
+  </div>
 </header>
 
-<section id="about" class="about">
-<div class="container">
-<h2 class="title">ABOUT <span class="gold">DJ SHYNE TYME</span></h2>
-<p class="subtitle">Good music. Good energy. A night people remember.</p>
-<p class="bigquote">From lounges and restaurants to parties and nightlife, <span class="gold">DJ SHYNE TYME</span> brings the vibe.</p>
-</div>
-</section>
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Calgary, Alberta • DJ & Entertainment</div>
+        <h1>SHYNE <span>TYME</span></h1>
+        <p class="tagline">Playing a little bit of everything.</p>
+        <p class="sub">Club energy, lounge vibes and event-ready sets for nights that need the right soundtrack. Available for bookings in Calgary and surrounding areas.</p>
+        <div class="actions">
+          <a class="btn primary" href="tel:+18257472753">Call / Book Me</a>
+          <a class="btn ghost" href="sms:+18257472753">Text Me</a>
+          <a class="btn ghost" href="https://instagram.com/djshynetyme" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="dj-shyne-tyme-brand.png" alt="DJ Shyne Tyme black and gold promotional artwork">
+        <div class="badge">CALGARY DJ</div>
+      </div>
+    </div>
+  </section>
 
-<section id="vibe">
-<div class="container">
-<h2 class="title">THE VIBE</h2>
-<p class="subtitle">A versatile sound built for the room and the crowd.</p>
-<div class="grid">
-<div class="card"><h3>Open Format</h3><p>Playing a little bit of everything — keeping the music moving and the crowd engaged.</p></div>
-<div class="card"><h3>Nightlife</h3><p>Club-style energy for lounges, restaurants, parties and special events.</p></div>
-<div class="card"><h3>Professional</h3><p>Reliable, experienced entertainment focused on making your event sound and feel right.</p></div>
-<div class="card"><h3>Calgary</h3><p>Proudly serving Calgary and the surrounding area.</p></div>
-</div>
-</div>
-</section>
+  <section id="about">
+    <div class="wrap">
+      <div class="section-kicker">About</div>
+      <h2 class="section-title">Music for the whole room.</h2>
+      <p class="intro">DJ Shyne Tyme brings a flexible open-format approach built around the crowd. From laid-back lounge sets to full-on party energy, the goal is simple: keep people moving and keep the vibe right.</p>
+      <div class="cards">
+        <div class="card"><h3>Clubs & Lounges</h3><p>Open-format sets that can move between throwbacks, hip-hop, R&B, dance, party classics and current favourites.</p></div>
+        <div class="card"><h3>Private Events</h3><p>Birthdays, celebrations and private parties with music shaped around your guests and the feel you want.</p></div>
+        <div class="card"><h3>Weddings & Corporate</h3><p>Professional event music with room to keep things classy early and turn up the energy when it is time to party.</p></div>
+      </div>
+    </div>
+  </section>
 
-<section id="book" class="contact">
-<div class="container">
-<h2 class="title">LET'S MAKE IT <span class="gold">SHYNE</span></h2>
-<p class="subtitle">Looking for a DJ for your next night, party, lounge or event?</p>
-<div class="phone"><a href="tel:+18257472753">825-747-2753</a></div>
-<p><a class="btn primary" href="tel:+18257472753">BOOK DJ SHYNE TYME</a></p>
-<div class="social">
-<a href="https://www.instagram.com/djshynetyme" target="_blank" rel="noopener">@djshynetyme on Instagram</a>
-</div>
-</div>
-</section>
+  <section class="vibe" id="vibe">
+    <div class="wrap vibe-grid">
+      <div>
+        <div class="section-kicker">The vibe</div>
+        <h2 class="section-title">A little bit of everything.</h2>
+        <p class="intro">No one-lane playlist. Sets can blend familiar favourites with fresh tracks and adjust in real time to what the room is responding to.</p>
+      </div>
+      <div>
+        <div class="pillrow">
+          <span class="pill">Hip-Hop</span><span class="pill">R&B</span><span class="pill">Throwbacks</span>
+          <span class="pill">Top 40</span><span class="pill">Dance</span><span class="pill">Party Classics</span>
+          <span class="pill">Lounge</span><span class="pill">Open Format</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>© 2026 DJ SHYNE TYME • Calgary, AB • Playing a little bit of everything</footer>
+  <section id="book">
+    <div class="wrap">
+      <div class="booking">
+        <div class="section-kicker">Bookings</div>
+        <h2 class="section-title">You bring the crew. I’ll bring the vibe.</h2>
+        <p class="intro" style="margin:0 auto">Looking for a DJ for a club night, lounge, wedding, birthday, corporate event or private party? Reach out directly.</p>
+        <div class="contact-links">
+          <a class="btn primary" href="tel:+18257472753">825-747-2753</a>
+          <a class="btn ghost" href="sms:+18257472753">Send a Text</a>
+          <a class="btn ghost" href="https://instagram.com/djshynetyme" target="_blank" rel="noopener">@djshynetyme</a>
+        </div>
+        <p style="margin-top:24px"><span class="social">Calgary, AB</span></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 DJ Shyne Tyme • Calgary, Alberta</div>
+</footer>
 </body>
 </html>
