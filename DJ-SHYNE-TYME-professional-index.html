@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070604">
+<title>DJ Shyne Tyme | Calgary Open-Format DJ</title>
+<meta name="description" content="DJ Shyne Tyme — Calgary open-format DJ for lounges, clubs, weddings, birthdays, corporate events and private parties. Playing a little bit of everything.">
+<style>
+:root{
+  --bg:#070604;
+  --bg2:#0d0b08;
+  --panel:#11100d;
+  --panel2:#17140e;
+  --text:#f8f5ee;
+  --muted:#b9b0a0;
+  --gold:#d5a928;
+  --gold2:#f1d06a;
+  --line:rgba(213,169,40,.28);
+  --shadow:0 24px 70px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55;
+  background:
+    radial-gradient(circle at 50% 0,rgba(213,169,40,.13),transparent 28%),
+    linear-gradient(180deg,#070604 0%,#0b0907 45%,#050504 100%);
+}
+a{color:inherit;text-decoration:none}
+img,video{max-width:100%}
+.wrap{width:min(1180px,92%);margin:auto}
+.gold{color:var(--gold2)}
+
+header{
+  position:sticky;top:0;z-index:80;
+  background:rgba(7,6,4,.88);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{font-weight:1000;letter-spacing:.16em;color:var(--gold2);font-size:1rem;white-space:nowrap}
+.navlinks{display:flex;align-items:center;gap:22px;font-size:.9rem}
+.navlinks a{color:#eee;transition:.2s}
+.navlinks a:hover{color:var(--gold2)}
+.nav-book{border:1px solid var(--gold);padding:9px 15px;border-radius:999px;font-weight:800}
+
+.hero{padding:78px 0 58px;min-height:84vh;display:grid;place-items:center}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.kicker{font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold2);font-weight:900}
+h1{font-size:clamp(4.2rem,9vw,7.7rem);line-height:.84;letter-spacing:-.065em;margin:.18em 0 .2em;font-weight:1000}
+h1 span{display:block;color:var(--gold2)}
+.hero-line{font-size:clamp(1.25rem,2.2vw,1.8rem);font-weight:800;margin:0 0 12px}
+.lead{color:var(--muted);font-size:1.05rem;max-width:660px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{min-height:50px;padding:0 22px;border-radius:999px;border:1px solid var(--gold);display:inline-flex;align-items:center;justify-content:center;font-weight:900}
+.btn.primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#080704;box-shadow:0 14px 35px rgba(213,169,40,.18)}
+.btn.ghost{background:rgba(255,255,255,.02)}
+.hero-art{position:relative;border-radius:30px;padding:12px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(213,169,40,.11),rgba(255,255,255,.015));box-shadow:var(--shadow)}
+.hero-art:before{content:"";position:absolute;inset:-1px;border-radius:30px;background:linear-gradient(135deg,rgba(241,208,106,.25),transparent 40%,rgba(213,169,40,.16));z-index:-1}
+.hero-art img{display:block;width:100%;border-radius:20px}
+.hero-badge{position:absolute;right:20px;bottom:20px;background:rgba(7,6,4,.94);border:1px solid var(--gold);padding:10px 14px;border-radius:999px;color:var(--gold2);font-size:.8rem;font-weight:900;letter-spacing:.08em}
+.proofbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.012)}
+.proofgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.proof{padding:22px 18px;text-align:center;border-right:1px solid var(--line)}
+.proof:last-child{border-right:0}
+.proof strong{display:block;color:var(--gold2);font-size:1rem}
+.proof span{color:var(--muted);font-size:.86rem}
+
+section{padding:88px 0}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:32px}
+.section-title{font-size:clamp(2.2rem,5vw,3.7rem);line-height:1.02;margin:.15em 0 0;letter-spacing:-.035em}
+.section-copy{color:var(--muted);max-width:590px;margin:0}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service{border:1px solid var(--line);border-radius:22px;padding:26px;background:linear-gradient(180deg,#11100d,#0b0a08)}
+.service .num{font-size:.72rem;letter-spacing:.18em;color:var(--gold2);font-weight:900}
+.service h3{margin:8px 0 8px;font-size:1.25rem}
+.service p{margin:0;color:var(--muted)}
+
+.signature{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:linear-gradient(90deg,rgba(213,169,40,.05),rgba(255,255,255,.01),rgba(213,169,40,.05))
+}
+.signature-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:center}
+.quote{font-size:clamp(2rem,4vw,3.25rem);line-height:1.05;font-weight:1000;letter-spacing:-.04em}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pill{border:1px solid var(--line);border-radius:999px;padding:10px 14px;background:#0c0b09;color:#eee;font-size:.9rem}
+
+.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.video-card{overflow:hidden;border:1px solid var(--line);border-radius:22px;background:#0a0907;box-shadow:0 14px 34px rgba(0,0,0,.24)}
+.video-card video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#000}
+.video-meta{padding:15px 17px 17px}
+.video-meta strong{display:block;color:var(--gold2);font-size:1rem}
+.video-meta span{display:block;color:var(--muted);font-size:.88rem;margin-top:2px}
+.video-card.featured{grid-column:1/-1;display:grid;grid-template-columns:1.45fr .55fr;align-items:stretch}
+.video-card.featured video{height:100%;aspect-ratio:auto;min-height:420px}
+.video-card.featured .video-meta{display:flex;flex-direction:column;justify-content:center;padding:34px}
+.video-card.featured .video-meta strong{font-size:1.55rem}
+.video-card.featured .video-meta:after{content:"Open-format • Calgary • Crowd-first";display:block;color:var(--muted);margin-top:10px;font-size:.95rem}
+
+.gallery-wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:28px;align-items:start}
+.gallery-copy{position:sticky;top:110px}
+.photo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.photo-grid figure{margin:0;overflow:hidden;border-radius:20px;border:1px solid var(--line);background:#0b0a08;min-height:280px}
+.photo-grid img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease}
+.photo-grid figure:hover img{transform:scale(1.025)}
+
+.booking{padding:58px 28px;border-radius:30px;border:1px solid var(--line);text-align:center;background:radial-gradient(circle at 50% 0,rgba(213,169,40,.16),transparent 44%),linear-gradient(180deg,#11100d,#090806);box-shadow:var(--shadow)}
+.booking h2{font-size:clamp(2.5rem,6vw,4.4rem);line-height:.98;letter-spacing:-.045em;margin:.18em auto .25em;max-width:850px}
+.booking p{max-width:680px;margin:0 auto;color:var(--muted)}
+.contact-links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:28px}
+footer{padding:30px 0 46px;color:#847b6a;text-align:center;font-size:.88rem}
+
+@media(max-width:900px){
+  .hero-grid,.signature-grid,.gallery-wrap{grid-template-columns:1fr}
+  .hero-art{order:-1}
+  .proofgrid{grid-template-columns:repeat(2,1fr)}
+  .proof:nth-child(2){border-right:0}
+  .proof:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .service-grid{grid-template-columns:1fr}
+  .section-head{display:block}
+  .section-copy{margin-top:14px}
+  .gallery-copy{position:static}
+  .video-grid{grid-template-columns:1fr}
+  .video-card.featured{grid-column:auto;display:block}
+  .video-card.featured video{min-height:0;aspect-ratio:16/9}
+  .video-card.featured .video-meta{padding:15px 17px 17px}
+}
+@media(max-width:640px){
+  .wrap{width:min(94%,1180px)}
+  nav{min-height:64px}
+  .brand{font-size:.85rem}
+  .navlinks{gap:12px;font-size:.82rem}
+  .navlinks a:nth-child(1),.navlinks a:nth-child(2){display:none}
+  .nav-book{padding:8px 12px}
+  .hero{padding:42px 0 42px;min-height:auto}
+  h1{font-size:clamp(3.7rem,18vw,5.7rem)}
+  .hero-line{font-size:1.16rem}
+  .actions{display:grid}
+  .btn{width:100%}
+  section{padding:66px 0}
+  .proof{padding:18px 10px}
+  .proof strong{font-size:.92rem}
+  .proof span{font-size:.78rem}
+  .video-card video,.video-card.featured video{aspect-ratio:9/16;object-fit:contain;max-height:72vh}
+  .photo-grid{grid-template-columns:1fr}
+  .photo-grid figure{min-height:0}
+  .photo-grid img{max-height:560px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#top">DJ SHYNE TYME</a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#videos">Live Vibes</a>
+        <a href="#gallery">Highlights</a>
+        <a class="nav-book" href="#book">Book Me</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">Calgary • Open-format DJ</div>
+      <h1>SHYNE <span>TYME</span></h1>
+      <p class="hero-line">Read the room. Set the tone. Keep it moving.</p>
+      <p class="lead">Playing a little bit of everything — from smooth lounge energy to full dance-floor moments. Built around the crowd, the venue and the vibe.</p>
+      <div class="actions">
+        <a class="btn primary" href="tel:+18257472753">Call / Book Me</a>
+        <a class="btn ghost" href="sms:+18257472753">Text Me</a>
+        <a class="btn ghost" href="https://instagram.com/djshynetyme" target="_blank" rel="noopener">@djshynetyme</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="dj-shyne-tyme-brand.png" alt="DJ Shyne Tyme black and gold branding">
+      <div class="hero-badge">CALGARY DJ</div>
+    </div>
+  </div>
+</section>
+
+<div class="proofbar">
+  <div class="wrap proofgrid">
+    <div class="proof"><strong>OPEN FORMAT</strong><span>A little bit of everything</span></div>
+    <div class="proof"><strong>LOUNGES & CLUBS</strong><span>Vibe-first sets</span></div>
+    <div class="proof"><strong>PRIVATE EVENTS</strong><span>Birthdays & celebrations</span></div>
+    <div class="proof"><strong>CALGARY, AB</strong><span>Available for bookings</span></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="kicker">What I bring</div>
+        <h2 class="section-title">A DJ who works the room.</h2>
+      </div>
+      <p class="section-copy">The set should fit the people in front of the speakers — not force the room into one sound. DJ Shyne Tyme moves between familiar favourites, throwbacks and current tracks to keep the energy natural.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service"><div class="num">01</div><h3>Lounges & Clubs</h3><p>Smooth starts, recognizable records and a build that follows the room instead of rushing it.</p></article>
+      <article class="service"><div class="num">02</div><h3>Private Parties</h3><p>Birthdays, celebrations and special events with a flexible soundtrack built around your guests.</p></article>
+      <article class="service"><div class="num">03</div><h3>Weddings & Corporate</h3><p>Professional event music that can stay polished early and bring the party when the moment calls for it.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="signature">
+  <div class="wrap signature-grid">
+    <div>
+      <div class="kicker">The Shyne Tyme sound</div>
+      <div class="quote">“You bring the crew. <span class="gold">I’ll bring the vibe.</span>”</div>
+    </div>
+    <div class="pills">
+      <span class="pill">Hip-Hop</span><span class="pill">R&B</span><span class="pill">Throwbacks</span>
+      <span class="pill">Top 40</span><span class="pill">Dance</span><span class="pill">Party Classics</span>
+      <span class="pill">Lounge</span><span class="pill">Open Format</span>
+    </div>
+  </div>
+</section>
+
+<section id="videos">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="kicker">Live vibes</div>
+        <h2 class="section-title">See the room. Feel the energy.</h2>
+      </div>
+      <p class="section-copy">Real moments from behind the decks — crowd energy, live mixes and nights where the room came alive.</p>
+    </div>
+
+    <div class="video-grid">
+      <article class="video-card featured">
+        <video controls playsinline preload="metadata" poster="thumbs/live-01.jpg"><source src="Videos/live-01.mp4" type="video/mp4">Your browser does not support video playback.</video>
+        <div class="video-meta"><strong>Live Vibe 1</strong><span>Featured moment • DJ Shyne Tyme</span></div>
+      </article>
+
+      <article class="video-card"><video controls playsinline preload="metadata" poster="thumbs/live-02.jpg"><source src="Videos/live-02.mp4" type="video/mp4">Your browser does not support video playback.</video><div class="video-meta"><strong>Live Vibe 2</strong><span>DJ Shyne Tyme • Calgary</span></div></article>
+      <article class="video-card"><video controls playsinline preload="metadata" poster="thumbs/live-03.jpg"><source src="Videos/live-03.mp4" type="video/mp4">Your browser does not support video playback.</video><div class="video-meta"><strong>Live Vibe 3</strong><span>DJ Shyne Tyme • Calgary</span></div></article>
+      <article class="video-card"><video controls playsinline preload="metadata" poster="thumbs/live-04.jpg"><source src="Videos/live-04.mp4" type="video/mp4">Your browser does not support video playback.</video><div class="video-meta"><strong>Live Vibe 4</strong><span>DJ Shyne Tyme • Calgary</span></div></article>
+      <article class="video-card"><video controls playsinline preload="metadata" poster="thumbs/live-05.jpg"><source src="Videos/live-05.mp4" type="video/mp4">Your browser does not support video playback.</video><div class="video-meta"><strong>Live Vibe 5</strong><span>DJ Shyne Tyme • Calgary</span></div></article>
+      <article class="video-card"><video controls playsinline preload="metadata" poster="thumbs/live-06.jpg"><source src="Videos/live-06.mp4" type="video/mp4">Your browser does not support video playback.</video><div class="video-meta"><strong>Live Vibe 6</strong><span>DJ Shyne Tyme • Calgary</span></div></article>
+      <article class="video-card"><video controls playsinline preload="metadata" poster="thumbs/live-07.jpg"><source src="Videos/live-07.mp4" type="video/mp4">Your browser does not support video playback.</video><div class="video-meta"><strong>Live Vibe 7</strong><span>DJ Shyne Tyme • Calgary</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="signature">
+  <div class="wrap gallery-wrap">
+    <div class="gallery-copy">
+      <div class="kicker">Highlights</div>
+      <h2 class="section-title">Behind the decks. Through the years.</h2>
+      <p class="section-copy" style="margin-top:14px">Crowd shots, DJ setups and past promotions — a look at the rooms, events and moments that built the Shyne Tyme story.</p>
+    </div>
+    <div class="photo-grid">
+      <figure><img src="photos/3747.jpg" alt="DJ setup and crowd"></figure>
+      <figure><img src="photos/3744.jpg" alt="Crowd on the dance floor"></figure>
+      <figure><img src="photos/1872.jpg" alt="Past DJ event flyer"></figure>
+      <figure><img src="photos/1873.jpg" alt="Past concert event flyer"></figure>
+      <figure><img src="photos/1877.jpg" alt="DJ behind the turntables"></figure>
+      <figure><img src="photos/1615.jpg" alt="DJ performance photo"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="booking">
+      <div class="kicker">Bookings</div>
+      <h2>You bring the crew. <span class="gold">I’ll bring the vibe.</span></h2>
+      <p>Looking for the right sound for a lounge, club night, wedding, birthday, corporate event or private party? Reach out directly and let’s talk about the room you want to create.</p>
+      <div class="contact-links">
+        <a class="btn primary" href="tel:+18257472753">825-747-2753</a>
+        <a class="btn ghost" href="sms:+18257472753">Send a Text</a>
+        <a class="btn ghost" href="https://instagram.com/djshynetyme" target="_blank" rel="noopener">@djshynetyme</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">© 2026 DJ Shyne Tyme • Calgary, Alberta</div></footer>
+
+</body>
+</html>
